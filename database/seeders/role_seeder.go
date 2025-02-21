@@ -22,7 +22,7 @@ func RunRoleSeeder(db *gorm.DB) {
 	for _, role := range roles {
 		err := db.FirstOrCreate(&role, models.Role{Code: role.Code}).Error
 		if err != nil {
-			logrus.Errorf("failed to seed roe: %v", err)
+			logrus.Errorf("failed to seed role: %v", err)
 			panic(err)
 		}
 		logrus.Infof("role %s successfully seeded", role.Code)
