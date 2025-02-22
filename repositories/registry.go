@@ -14,7 +14,7 @@ type IRepositoryRegistry interface {
 	GetUser() repositories.IUserRepository
 }
 
-func NewUserRepositoryRegisry(db *gorm.DB) IRepositoryRegistry {
+func NewUserRepositoryRegistry(db *gorm.DB) IRepositoryRegistry {
 	return &Registry{db: db}
 }
 

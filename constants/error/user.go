@@ -5,13 +5,14 @@ import "errors"
 var (
 	ErrUserNotFound         = errors.New("user not found")
 	ErrPasswordInCorrect    = errors.New("password incorrect")
-	ErrUserNameExists       = errors.New("username already exists")
+	ErrUsernameExists       = errors.New("username already exists")
+	ErrEmailExists          = errors.New("email already exists")
 	ErrPasswordDoesNotMatch = errors.New("password does not match")
 )
 
 var UserErrors = []error{
 	ErrUserNotFound,
 	ErrPasswordInCorrect,
-	ErrUserNameExists,
+	ErrUsernameExists,
 	ErrPasswordDoesNotMatch,
 }
