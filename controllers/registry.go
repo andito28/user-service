@@ -10,13 +10,13 @@ type Registry struct {
 }
 
 type IUserControllerRegistry interface {
-	GetUser() controllers.IUserController
+	GetUserController() controllers.IUserController
 }
 
 func NewUserControllerRegistry(service services.IServiceRegistry) IUserControllerRegistry {
 	return &Registry{service: service}
 }
 
-func (r *Registry) GetUser() controllers.IUserController {
+func (r *Registry) GetUserController() controllers.IUserController {
 	return controllers.NewUserController(r.service)
 }
